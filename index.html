@@ -2,407 +2,273 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#6d2038">
-<meta name="description" content="Mehndi Wedding Hub - Mehndi Designs and Wedding Ideas">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mehndi Wedding Hub</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
-
 <style>
-:root {
---wine:#6d2038;
---dark:#451628;
---cream:#fff8f0;
---pink:#f5e1d6;
---text:#442633;
---muted:#806d70;
-}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{
-margin:0;
-background:var(--cream);
-color:var(--text);
-font-family:"DM Sans","Tiro Devanagari Hindi",sans-serif;
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#fff8f3;
+ color:#44202e;
 }
-a{text-decoration:none;color:inherit}
-
 header{
-background:linear-gradient(120deg,#50172c,#7a2942);
-color:white;
-text-align:center;
-padding:23px 14px 18px;
+ background:linear-gradient(135deg,#650d38,#c04470);
+ color:white;
+ text-align:center;
+ padding:35px 12px;
 }
-.brand{
-font-family:"Playfair Display",serif;
-font-size:clamp(25px,5vw,35px);
-font-weight:700;
-}
-.tagline{font-size:12px;margin-top:7px}
-
+header h1{font-size:32px}
 nav{
-position:sticky;
-top:0;
-z-index:20;
-display:flex;
-justify-content:center;
-gap:clamp(13px,4vw,30px);
-padding:13px 8px;
-background:var(--dark);
-color:white;
+ display:flex;
+ overflow-x:auto;
+ gap:8px;
+ padding:12px;
+ background:white;
+ position:sticky;
+ top:0;
+ z-index:5;
 }
-nav a{font-size:13px;font-weight:700}
-
-.hero{
-min-height:310px;
-display:grid;
-place-items:center;
-text-align:center;
-padding:42px 18px;
-background:
-linear-gradient(#fff3e8dc,#fff3e8dc),
-url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=85") center/cover;
+button{
+ border:0;
+ padding:12px 16px;
+ border-radius:25px;
+ background:#f5dce6;
+ color:#76133f;
+ font-weight:bold;
+ cursor:pointer;
+ white-space:nowrap;
 }
-.hero-inner{max-width:760px}
-.hero h1{
-font-family:"Tiro Devanagari Hindi",serif;
-color:var(--wine);
-font-size:clamp(27px,5vw,42px);
+button.active,.load{
+ background:#79123f;
+ color:white;
 }
-.hero p{font-size:15px;line-height:1.8}
-
-.btn{
-display:inline-block;
-background:var(--wine);
-color:white;
-padding:12px 22px;
-border-radius:28px;
-font-size:14px;
-font-weight:700;
-}
-
-section{
-max-width:1180px;
-margin:auto;
-padding:48px 18px 5px;
-}
-.section-title{text-align:center;margin-bottom:24px}
-.section-title h2{
-color:var(--wine);
-font-family:"Tiro Devanagari Hindi",serif;
-font-size:26px;
-}
-.section-title p{font-size:13px;color:var(--muted)}
-
+main{padding:15px;max-width:1200px;margin:auto}
+h2{text-align:center;color:#8a1949}
 .grid{
-display:grid;
-grid-template-columns:repeat(3,minmax(0,1fr));
-gap:18px;
+ display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(145px,1fr));
+ gap:12px;
 }
 .card{
-background:white;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 5px 18px #4d273012;
+ background:white;
+ border-radius:12px;
+ overflow:hidden;
+ box-shadow:0 2px 8px #0002;
 }
 .card img{
-display:block;
-width:100%;
-height:205px;
-object-fit:cover;
-background:#f0e6e1;
+ width:100%;
+ height:180px;
+ object-fit:cover;
+ display:block;
+ cursor:pointer;
 }
-.card-copy{padding:13px 14px 15px}
-.card h3{font-size:16px;color:var(--wine);margin:0 0 6px}
-.card p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
-
-.gallery-card{cursor:zoom-in}
-.gallery-card img{height:220px}
-
-.tips{
-display:grid;
-grid-template-columns:repeat(3,minmax(0,1fr));
-gap:15px;
+.card p{
+ text-align:center;
+ font-size:13px;
+ font-weight:bold;
+ padding:5px;
 }
-.tip{
-background:white;
-border:1px solid #f1e2d8;
-border-radius:14px;
-padding:18px;
+.load{
+ display:block;
+ margin:25px auto;
+ padding:14px 30px;
 }
-.tip h3{color:var(--wine);font-size:15px}
-.tip p{font-size:13px;line-height:1.7;color:var(--muted)}
-
-.contact{
-max-width:1140px;
-margin:48px auto 35px;
-background:var(--pink);
-border-radius:18px;
-padding:30px 18px;
-text-align:center;
-}
-.contact h2{color:var(--wine)}
-.contact p{font-size:14px;line-height:1.8}
-
 footer{
-background:var(--dark);
-color:#fbeef0;
-text-align:center;
-padding:18px 10px;
-font-size:12px;
+ background:#650d38;
+ color:white;
+ text-align:center;
+ padding:30px 10px;
 }
-
-.lightbox{
-position:fixed;
-inset:0;
-background:#16080de8;
-display:none;
-align-items:center;
-justify-content:center;
-padding:18px;
-z-index:50;
+.whatsapp{
+ display:inline-block;
+ background:#159b51;
+ color:white;
+ padding:14px 25px;
+ border-radius:25px;
+ text-decoration:none;
 }
-.lightbox.open{display:flex}
-.lightbox img{
-max-width:95vw;
-max-height:85vh;
-border-radius:12px;
+#viewer{
+ display:none;
+ position:fixed;
+ inset:0;
+ background:#000e;
+ z-index:20;
+ align-items:center;
+ justify-content:center;
 }
-.close{
-position:absolute;
-right:20px;
-top:12px;
-color:white;
-font-size:38px;
-cursor:pointer;
+#viewer img{
+ max-width:95%;
+ max-height:85%;
 }
-
-@media(max-width:700px){
-.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
-.card img{height:165px}
-.gallery-card img{height:175px}
-.tips{grid-template-columns:1fr}
-}
-@media(max-width:420px){
-nav{gap:13px}
-nav a{font-size:11px}
-.card img{height:145px}
-.gallery-card img{height:155px}
-.card-copy{padding:10px}
-.card h3{font-size:14px}
-.card p{font-size:11px}
+#viewer button{
+ position:absolute;
+ top:15px;
+ right:15px;
+ font-size:25px;
 }
 </style>
 </head>
 
 <body>
 
-<header id="home">
-<div class="brand">🌸 Mehndi Wedding Hub 🌸</div>
-<div class="tagline">Beautiful Mehndi Designs • Wedding Inspiration • Special Moments</div>
+<header>
+<h1>🌸 Mehndi Wedding Hub 🌸</h1>
+<p>Mehndi Designs | Wedding Decoration | Wedding Gallery</p>
 </header>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#mehndi">Mehndi</a>
-<a href="#wedding">Wedding</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</nav>
+<nav id="nav"></nav>
 
 <main>
+<h2 id="title">Bridal Mehndi Designs</h2>
+<p style="text-align:center" id="info">
+अपनी पसंद के सुंदर डिजाइन देखें।
+</p>
 
-<div class="hero">
-<div class="hero-inner">
-<h1>आपकी शादी, आपकी खूबसूरत कहानी</h1>
-<p>Bridal Mehndi से लेकर Wedding Ideas तक — हर खास मौके के लिए ढेर सारी inspiration एक ही जगह।</p>
-<a class="btn" href="#mehndi">Designs देखें</a>
-</div>
-</div>
+<div class="grid" id="gallery"></div>
 
-<section id="mehndi">
-<div class="section-title">
-<h2>🌿 Mehndi Designs</h2>
-<p>अपनी पसंद का खूबसूरत मेहंदी स्टाइल चुनें।</p>
-</div>
-
-<div class="grid">
-
-<article class="card">
-<img loading="lazy" src="https://images.unsplash.com/photo-1771992230380-bc023f41771e?auto=format&fit=crop&w=900&q=85" alt="Bridal Mehndi">
-<div class="card-copy">
-<h3>Bridal Mehndi</h3>
-<p>दुल्हन के हाथों के लिए खूबसूरत और बारीक bridal designs.</p>
-</div>
-</article>
-
-<article class="card">
-<img loading="lazy" src="https://images.unsplash.com/photo-1563962750292-d3401f66d46b?auto=format&fit=crop&w=900&q=85" alt="Arabic Mehndi">
-<div class="card-copy">
-<h3>Arabic Mehndi</h3>
-<p>फूलों और बेलों वाले elegant Arabic style ideas.</p>
-</div>
-</article>
-
-<article class="card">
-<img loading="lazy" src="https://images.unsplash.com/photo-1755234993813-054bc8c8a698?auto=format&fit=crop&w=900&q=85" alt="Simple Mehndi">
-<div class="card-copy">
-<h3>Simple Mehndi</h3>
-<p>छोटे और खास मौकों के लिए सुंदर simple designs.</p>
-</div>
-</article>
-
-</div>
-</section>
-
-<section id="wedding">
-<div class="section-title">
-<h2>💍 Wedding Ideas</h2>
-<p>शादी के हर खास पल को और यादगार बनाइए।</p>
-</div>
-
-<div class="grid">
-
-<article class="card">
-<img loading="lazy" src="https://images.unsplash.com/photo-1747040762931-d1c96be72798?auto=format&fit=crop&w=900&q=85" alt="Wedding Decoration">
-<div class="card-copy">
-<h3>Wedding Decoration</h3>
-<p>Stage, flowers और खूबसूरत सजावट के ideas.</p>
-</div>
-</article>
-
-<article class="card">
-<img loading="lazy" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=85" alt="Wedding Moments">
-<div class="card-copy">
-<h3>Wedding Moments</h3>
-<p>आपके खास दिन के लिए प्यारे यादगार moments.</p>
-</div>
-</article>
-
-<article class="card">
-<img loading="lazy" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=85" alt="Wedding Planning">
-<div class="card-copy">
-<h3>Wedding Planning</h3>
-<p>Venue, seating और छोटी-छोटी planning tips.</p>
-</div>
-</article>
-
-</div>
-</section>
-
-<section id="gallery">
-<div class="section-title">
-<h2>📸 Photo Gallery</h2>
-<p>Wedding और mehndi inspiration की तस्वीरें — फोटो पर टैप करके बड़ी देखें।</p>
-</div>
-
-<div class="grid">
-
-<article class="card gallery-card">
-<img loading="lazy" src="https://images.unsplash.com/photo-1771992230380-bc023f41771e?auto=format&fit=crop&w=900&q=85" alt="Bridal Mehndi">
-<div class="card-copy"><h3>Bridal Mehndi</h3><p>दुल्हन के हाथों की खूबसूरत मेहंदी।</p></div>
-</article>
-
-<article class="card gallery-card">
-<img loading="lazy" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=85" alt="Wedding Celebration">
-<div class="card-copy"><h3>Wedding Celebration</h3><p>शादी के यादगार पल।</p></div>
-</article>
-
-<article class="card gallery-card">
-<img loading="lazy" src="https://images.unsplash.com/photo-1755234993813-054bc8c8a698?auto=format&fit=crop&w=900&q=85" alt="Mehndi Inspiration">
-<div class="card-copy"><h3>Mehndi Inspiration</h3><p>Simple और elegant mehndi ideas.</p></div>
-</article>
-
-<article class="card gallery-card">
-<img loading="lazy" src="https://images.unsplash.com/photo-1747040762931-d1c96be72798?auto=format&fit=crop&w=900&q=85" alt="Floral Decoration">
-<div class="card-copy"><h3>Floral Decoration</h3><p>फूलों से सजी wedding सजावट।</p></div>
-</article>
-
-<article class="card gallery-card">
-<img loading="lazy" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85" alt="Wedding Venue">
-<div class="card-copy"><h3>Wedding Venue</h3><p>सुंदर venue और celebration ideas.</p></div>
-</article>
-
-<article class="card gallery-card">
-<img loading="lazy" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=85" alt="Wedding Details">
-<div class="card-copy"><h3>Wedding Details</h3><p>Table setting और छोटे details.</p></div>
-</article>
-
-</div>
-</section>
-
-<section id="tips">
-<div class="section-title">
-<h2>✨ Helpful Wedding Tips</h2>
-<p>शादी की तैयारी को आसान बनाने के लिए कुछ काम की बातें।</p>
-</div>
-
-<div class="tips">
-<article class="tip">
-<h3>🌿 Mehndi लगाने से पहले</h3>
-<p>हाथ साफ और सूखे रखें। मेहंदी लगाने से पहले हाथों पर तेल या क्रीम न लगाएँ।</p>
-</article>
-
-<article class="tip">
-<h3>💐 Decoration Planning</h3>
-<p>Venue, रंगों और फूलों की theme पहले तय करें, ताकि पूरी सजावट एक जैसी लगे।</p>
-</article>
-
-<article class="tip">
-<h3>📸 Photo Checklist</h3>
-<p>Family photos, couple portraits और ceremony moments की छोटी checklist पहले बना लें।</p>
-</article>
-</div>
-</section>
-
-<section id="contact" class="contact">
-<h2>📞 Contact Us</h2>
-<p>Mehndi या wedding से जुड़ी जानकारी के लिए WhatsApp पर संपर्क करें।</p>
-<a class="btn" href="https://wa.me/917079569782?text=Namaste%2C%20mujhe%20Mehndi%20Wedding%20Hub%20ke%20baare%20mein%20jaankari%20chahiye." target="_blank" rel="noopener">WhatsApp पर संपर्क करें</a>
-</section>
-
+<button class="load" id="load">और डिजाइन देखें</button>
 </main>
 
 <footer>
-© <span id="year"></span> Mehndi Wedding Hub • Made with ♥
+<h2 style="color:white">Mehndi Wedding Hub</h2>
+<p>आपकी शादी को बनाएँ और भी खास ❤️</p>
+<a class="whatsapp"
+href="https://wa.me/?text=Hello%20Mehndi%20Wedding%20Hub">
+WhatsApp Contact
+</a>
 </footer>
 
-<div class="lightbox" id="lightbox">
-<span class="close" id="close">&times;</span>
-<img id="largeImage" alt="Gallery preview">
+<div id="viewer" onclick="closePhoto()">
+<button>✖</button>
+<img id="big">
 </div>
 
 <script>
-document.getElementById("year").textContent=new Date().getFullYear();
 
-const box=document.getElementById("lightbox");
-const large=document.getElementById("largeImage");
+const categories=[
 
-document.querySelectorAll(".gallery-card img").forEach(img=>{
-img.addEventListener("click",()=>{
-large.src=img.currentSrc||img.src;
-large.alt=img.alt;
-box.classList.add("open");
-});
-});
+{
+name:"Bridal Mehndi",
+title:"👰 Bridal Mehndi Designs",
+tag:"bridal,henna,hand"
+},
 
-function closeBox(){
-box.classList.remove("open");
-large.src="";
+{
+name:"Arabic Mehndi",
+title:"🌿 Arabic Mehndi Designs",
+tag:"arabic,henna"
+},
+
+{
+name:"Simple Mehndi",
+title:"🌸 Simple Mehndi Designs",
+tag:"simple,mehndi,henna"
+},
+
+{
+name:"Wedding Decoration",
+title:"💐 Wedding Decoration",
+tag:"wedding,decoration,flowers"
+},
+
+{
+name:"Wedding Gallery",
+title:"📸 Wedding Photo Gallery",
+tag:"indian,wedding,bride"
+},
+
+{
+name:"Wedding Planning",
+title:"💍 Wedding Planning Ideas",
+tag:"wedding,celebration"
 }
 
-document.getElementById("close").addEventListener("click",closeBox);
+];
 
-box.addEventListener("click",e=>{
-if(e.target===box)closeBox();
+let current=0;
+let shown=0;
+const total=120;
+
+const nav=document.getElementById("nav");
+const gallery=document.getElementById("gallery");
+
+categories.forEach((c,i)=>{
+ let b=document.createElement("button");
+ b.textContent=c.name;
+
+ b.onclick=()=>{
+  current=i;
+  shown=0;
+  gallery.innerHTML="";
+  document.getElementById("title").textContent=c.title;
+
+  document.querySelectorAll("nav button")
+  .forEach(x=>x.classList.remove("active"));
+
+  b.classList.add("active");
+  loadPhotos();
+ };
+
+ nav.appendChild(b);
 });
 
-document.addEventListener("keydown",e=>{
-if(e.key==="Escape")closeBox();
-});
+function loadPhotos(){
+
+ let c=categories[current];
+
+ let end=Math.min(shown+30,total);
+
+ for(let i=shown;i<end;i++){
+
+  let card=document.createElement("div");
+  card.className="card";
+
+  let img=document.createElement("img");
+
+  img.loading="lazy";
+  img.alt=c.name+" Design "+(i+1);
+
+  img.src=
+  "https://loremflickr.com/600/800/"
+  +encodeURIComponent(c.tag)
+  +"?lock="+(current*1000+i+1);
+
+  img.onerror=function(){
+   this.onerror=null;
+   this.src=
+   "https://placehold.co/600x800/f5e0e9/78133f?text="
+   +encodeURIComponent(c.name+" "+(i+1));
+  };
+
+  img.onclick=()=>{
+   document.getElementById("big").src=img.src;
+   document.getElementById("viewer").style.display="flex";
+  };
+
+  let p=document.createElement("p");
+  p.textContent=c.name+" Design "+(i+1);
+
+  card.appendChild(img);
+  card.appendChild(p);
+  gallery.appendChild(card);
+ }
+
+ shown=end;
+
+ document.getElementById("load").style.display=
+ shown>=total?"none":"block";
+}
+
+document.getElementById("load").onclick=loadPhotos;
+
+function closePhoto(){
+ document.getElementById("viewer").style.display="none";
+}
+
+document.getElementById("nav").children[0].click();
+
 </script>
 
 </body>
